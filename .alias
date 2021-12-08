@@ -1,0 +1,6 @@
+function git_restore_files {
+	git restore --stage $(git status | grep "new file" | awk '{print $3}')
+}
+
+alias gitlog='git log --graph --decorate --pretty=oneline'
+alias gitrestorefiles='git_retore_files'
