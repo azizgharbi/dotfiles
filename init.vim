@@ -7,6 +7,9 @@ set number
 " Set no wrap
 set nowrap
 
+" Set clipboard
+set clipboard=unnamed
+
 " Plugins
 call plug#begin('~/.vim/plugged')
     Plug 'preservim/nerdtree'
