@@ -2,7 +2,7 @@
 Cyberpunk for Awesome WM 4.x
 -------------------------
 
-:Stole by: Flava
+:Stolen by: Flava
 :Version: git
 :License: BY-SA_
 :Source: https://github.com/lcpz/awesome-copycats
