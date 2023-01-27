@@ -4,7 +4,7 @@ local awesome_Dir = io.open(dir .. "awesome")
 local nvim_Dir = io.open(dir .. "nvim")
 
 -- Setup function
-local function setup()
+local function lsp_install()
 	-- copy paste
 	os.execute("sudo pacman -S xsel")
 	-- regex
@@ -27,6 +27,8 @@ if awesome_Dir then
 else
 	os.execute("cp -r awesome " .. dir)
 end
+
+os.execute("ln -s " .. "awesome" .. " " .. awesome_Dir)
 --]]
 
 --[[ 
@@ -38,14 +40,15 @@ if nvim_Dir then
 else
 	os.execute("cp -r nvim " .. dir)
 end
+os.execute("ln -s " .. "nvim" .. " " .. nvim_Dir)
 --]]
 
 --[[
     Lsp installation
     Catch error if missing node ]]
-if pcall(setup) then
-	print("Success")
+if pcall(lsp_install) then
+	print("Success installation!")
 else
-	print("Please install nodejs")
+	print("Missing dependencies")
 end
 --]]
