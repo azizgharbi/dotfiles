@@ -5,7 +5,7 @@ local io = { lines = io.lines, open = io.open }
 local pairs = pairs
 local rawget = rawget
 local tsort = table.sort
-local unpack = unpack or table.unpack -- lua 5.1 retro-compatibility
+local unpack = table.unpack
 
 -- Lain helper functions for internal use
 -- lain.helpers
