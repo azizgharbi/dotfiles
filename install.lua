@@ -1,7 +1,6 @@
 local os = require("os")
 local dir = os.getenv("HOME") .. "/.config/"
-local awesome_Dir = io.open(dir .. "awesome")
-local nvim_Dir = io.open(dir .. "nvim")
+local configs = { "awesome", "nvim" }
 
 -- Setup function
 local function lsp_install()
@@ -19,36 +18,26 @@ end
 --}}
 
 --[[
-    Check if awesome config exist
+    Check if config exist
     Else copy copy config
     create a symbolic links ]]
-if awesome_Dir then
-	print(awesome_Dir .. "Exist")
-else
-	os.execute("cp -r awesome " .. dir)
+for _, config in ipairs(configs) do
+	local dir_exist = io.open(dir .. config)
+	if dir_exist then
+		print(config .. " Configuration exist")
+	else
+		os.execute("cp -r " .. config .. " " .. dir .. config)
+	end
+	-- os.execute("ln -s " .. Dir .. config .. "/*" .. " " .. config)
 end
-
-os.execute("ln -s " .. "awesome" .. " " .. awesome_Dir)
---]]
-
---[[ 
-    Check if nvim config exist
-    Else copy copy config
-    create a symbolic links ]]
-if nvim_Dir then
-	print(nvim_Dir .. "Exist")
-else
-	os.execute("cp -r nvim " .. dir)
-end
-os.execute("ln -s " .. "nvim" .. " " .. nvim_Dir)
 --]]
 
 --[[
     Lsp installation
     Catch error if missing node ]]
 if pcall(lsp_install) then
-	print("Success installation!")
+	print("Success Installation!")
 else
-	print("Missing dependencies")
+	print("Missing Dependencies")
 end
 --]]
