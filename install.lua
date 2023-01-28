@@ -19,7 +19,7 @@ end
 
 --[[
     Check if config exist
-    Else copy copy config
+    Else copy config
     create a symbolic links ]]
 for _, config in ipairs(configs) do
 	local dir_exist = io.open(dir .. config)
