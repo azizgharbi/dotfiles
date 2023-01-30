@@ -47,6 +47,7 @@ end
 
 --[[
 -- Display menu
+-- Colors using: ANSI escape codes 
 --]]
 local function display_menu()
 	io.write("\27[32m [0] - Set config files \27[0m\n") -- green color
