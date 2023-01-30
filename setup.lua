@@ -4,16 +4,10 @@ local configs = { "awesome", "nvim" }
 
 -- Setup function
 local function lsp_install()
-	-- copy paste
-	os.execute("sudo pacman -S xsel")
-	-- regex
-	os.execute("sudo pacman -S ripgrep ripgrep-all")
-	-- tssever lsp
-	os.execute("sudo npm i -g typescript-language-server typescript-language-server")
-	-- go lsp
-	os.execute("sudo pacman -S gopls")
-	-- vuels
-	os.execute("sudo npm i -g vls")
+	-- copy paste regex
+	os.execute("sudo pacman -S xsel ripgrep ripgrep-all")
+	-- tssever go vuels lsp
+	os.execute("sudo npm i -g typescript-language-server typescript-language-server gopls vls")
 end
 --}}
 
