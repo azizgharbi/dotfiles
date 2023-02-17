@@ -28,6 +28,17 @@ end
 --]]
 
 --[[
+    Update Configurations
+  ]]
+local function update_dotfiles()
+	for _, config in ipairs(configs) do
+		os.execute("rm -rf " .. config)
+		os.execute("mv " .. dir .. config .. " ~/dotfiles/")
+	end
+end
+--]]
+
+--[[
     Lsp installation
     Catch error if missing node ]]
 local function execute_lsp_install()
@@ -46,7 +57,7 @@ end
 local function display_menu()
 	io.write("\27[32m [0] - Set config files \27[0m\n") -- green color
 	io.write("\27[34m [1] - Install Lsp (Language Server Protocol)\27[0m\n") -- blue color
-	io.write("\27[33m [2] - Update config files (wip)\27[0m\n") -- yellow color
+	io.write("\27[33m [2] - Update dotfiles (wip)\27[0m\n") -- yellow color
 	io.write("\27[31m [3] - Exit\27[0m\n") -- red color
 end
 --]]
@@ -63,6 +74,8 @@ local function execute_choice()
 			set_config_files()
 		elseif selection == "1" then
 			execute_lsp_install()
+		elseif selection == "2" then
+			update_dotfiles()
 		elseif selection == "3" then
 			break
 		end
