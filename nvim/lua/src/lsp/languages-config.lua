@@ -76,7 +76,7 @@ local languages = {
 	"pyright",
 	"tsserver",
 	"rust_analyzer",
-	"sumneko_lua",
+	"lua_ls",
 	"phpactor",
 	"gopls",
 	"vuels",
