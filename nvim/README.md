@@ -1,61 +1,37 @@
-# Neovim configuration
+## Neovim configuration:
 
-Based on lunarVim, I made my own configuration:
+- Based on `LazyVim`, because i am lazy.
 
-`rust` `lua` `typescript` `javascript` `go` `vuejs` lsp simple configs.
+`Rust` `Lua` `Typescript` `Javascript` `Go` `Vue.js` lsp simple configs.
 
-## Try out this config
-
-Based on this repository:
-```
-https://github.com/LunarVim/Neovim-from-scratch
-```
-Run `nvim` and wait for the plugins to be installed
-**NOTE** (You will notice treesitter pulling in a bunch of parsers the next time you open Neovim)
-## Get healthy
-
-Open `nvim` and enter the following:
-
+- Open `nvim` and enter the following:
  ```
  :checkhealth
  ```
-First we'll fix copy/paste
-
 - On Arch Linux
  ```
  sudo pacman -S xsel
  ```
-
-- Regex 
+- Regex:
  ```
  sudo pacman -S ripgrep ripgrep-all
  ```
-
-- LSP for javascript and typescript
+- Javascript and typescript:
  ```
  sudo npm i -g typescript-language-server typescript-language-server
  ```
-
-- LSP for vue (framework)
+- Vue.js (framework):
  ```
  sudo npm -i -g vls
  ```
- 
-- LSP for lua
- ```
- visit : https://github.com/sumneko/lua-language-server/wiki/Getting-Started
- ```
+- Lua (lua_ls)
 
-- LSP for php (phpactor)
+- PHP (phpactor)
  ```
  https://phpactor.readthedocs.io/en/master/usage/standalone.html
  ```
-
-- LSP for Go (gopls)
+- Go (gopls)
  ```
  sudo pacman -S gopls
  ```
-
- - Custom commands are defined in `src/custom-commands.lua`
-
 
