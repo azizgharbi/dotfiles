@@ -35,6 +35,8 @@ local function update_dotfiles()
 		os.execute("rm -rf " .. config)
 		os.execute("mv " .. dir .. config .. " ~/dotfiles/")
 	end
+	-- set the updated config files
+	set_config_files()
 end
 --]]
 
@@ -57,7 +59,7 @@ end
 local function display_menu()
 	io.write("\27[32m [0] - Set config files \27[0m\n") -- green color
 	io.write("\27[34m [1] - Install Lsp (Language Server Protocol)\27[0m\n") -- blue color
-	io.write("\27[33m [2] - Update dotfiles (wip)\27[0m\n") -- yellow color
+	io.write("\27[33m [2] - Update dotfiles\27[0m\n") -- yellow color
 	io.write("\27[31m [3] - Exit\27[0m\n") -- red color
 end
 --]]
