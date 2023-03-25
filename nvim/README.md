@@ -24,8 +24,6 @@
  ```
  sudo npm -i -g vls
  ```
-- Lua (lua_ls)
-
 - PHP (phpactor)
  ```
  https://phpactor.readthedocs.io/en/master/usage/standalone.html
