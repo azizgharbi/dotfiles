@@ -4,5 +4,5 @@
 
 local error_file_path = "/var/log/nvim.log"
 if error_file_path then
-  vim.opt.errorfile = error_file_path
+	vim.opt.errorfile = error_file_path
 end
