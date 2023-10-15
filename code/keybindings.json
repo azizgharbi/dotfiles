@@ -1,5 +1,7 @@
 [
-  // NAVIGATION
+  {
+    "_comment": "NAVIGATION"
+  },
   {
     "key": "ctrl+shift+a",
     "command": "workbench.action.terminal.focusNext",
@@ -19,7 +21,9 @@
     "command": "workbench.action.terminal.new",
     "when": "terminalFocus"
   },
-  // FILE TREE
+  {
+    "_comment": "File TREE"
+  },
   {
     "command": "workbench.action.toggleSidebarVisibility",
     "key": "ctrl+e"
@@ -45,16 +49,13 @@
     "when": "explorerViewletFocus"
   },
   {
-    "key": "shift+n",
-    "command": "workbench.action.newWindow",
-    "when": "!explorerViewletFocus"
-  },
-  {
     "command": "deleteFile",
     "key": "d",
     "when": "filesExplorerFocus && !inputFocus"
   },
-  // EXTRA
+  {
+    "_comment": "EXTRA"
+  },
   {
     "key": "ctrl+shift+5",
     "command": "editor.emmet.action.matchTag"
