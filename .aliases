@@ -6,6 +6,15 @@ function mars() {
     aws ssm start-session --target=${instance} --region=us-east-1
 }
 
+function eclipse() {
+    instance=`aws ec2 describe-tags --filters Name=value,Values=Eclipse-mv-auto --region=us-east-1 --output text | awk -F "\t" '$1=="TAGS" {print $3}'`
+    aws ssm start-session --target=${instance} --region=us-east-1
+}
+
+function mars-bastion() {
+    aws-gate ssh -r us-east-1 -l ssm-user -L 3306:marsdb-mvdbclusterfromsnap-4z0oikvxegct.cluster-c6nbxruqieec.us-east-1.rds.amazonaws.com:3306 Mars-mv-auto
+}
+
 # alias for openvpn3
 alias vpn-connect='openvpn3 session-start --config ~/Documents/mavtek_projects/mavtek.ovpn'
 alias vpn-disconnect='openvpn3 session-manage --config ~/Documents/mavtek_projects/mavtek.ovpn --disconnect'
@@ -14,18 +23,15 @@ alias vpn-sessions='openvpn3 sessions-list'
 alias vpn-profiles='openvpn3 configs-list'
 alias vpn-logs="openvpn3 log --log-level 6 --config ~/Documents/mavtek_projects/mavtek.ovpn"
 
-
 # nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-
 ## gpt cli 
 alias bubby="python ~/Documents/projects/blubybb_bot/command.py"
 
 # wifi connect
-
 alias wifilist='nmcli device wifi list'
 alias wifidown='nmcli connection down'
 alias wifishow='nmcli connection show --active'
@@ -38,3 +44,5 @@ function wificonnect() {
   fi
 }
 
+# Python virtual env
+alias source-bastion-venv = "source ~/aws-gate-env/bin/activate"
