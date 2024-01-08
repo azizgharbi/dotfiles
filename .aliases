@@ -1,6 +1,11 @@
 # mavtek
 export PATH="$HOME/.mavtek/bin:$PATH"
 
+# envs
+export TELEGRAM_TOKEN=""
+export OPEN_AI_API_KEY=""
+
+
 function mars() {
     instance=`aws ec2 describe-tags --filters Name=value,Values=Mars-mv-auto --region=us-east-1 --output text | awk -F "\t" '$1=="TAGS" {print $3}'`
     aws ssm start-session --target=${instance} --region=us-east-1
