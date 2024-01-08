@@ -45,4 +45,5 @@ function wificonnect() {
 }
 
 # Python virtual env
-alias source-bastion-venv = "source ~/aws-gate-env/bin/activate"
+alias source-bastion-venv='source ~/aws-gate-env/bin/activate'
+alias source-pdf2image='source ~/Documents/projects/pdf2jpeg/pdf2image/bin/activate'
