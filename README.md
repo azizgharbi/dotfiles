@@ -6,4 +6,4 @@
 
 #### Yabai:
 
-- brew services start yabai
+- yabai --start-service
