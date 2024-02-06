@@ -1,0 +1,60 @@
+	[
+		{
+			"keys": [
+				"g",
+				"d"
+			],
+			"command": "lsp_symbol_definition",
+			"context": [
+				{
+					"key": "setting.command_mode",
+					"operand": true
+				},
+				{
+					"key": "setting.is_widget",
+					"operand": false
+				}
+			]
+		},
+		{
+			"keys": [
+				"g",
+				"r"
+			],
+			"command": "lsp_symbol_references",
+			"context": [
+				{
+					"key": "setting.command_mode",
+					"operand": true
+				},
+				{
+					"key": "setting.is_widget",
+					"operand": false
+				}
+			]
+		},
+		{
+			"keys": [
+				"g",
+				"f"
+			],
+			"command": "lsp_format_document",
+			"context": [
+				{
+					"key": "setting.command_mode",
+					"operand": true
+				},
+				{
+					"key": "setting.is_widget",
+					"operand": false
+				}
+			]
+		},
+		{
+			"keys": [
+				"ctrl+b",
+				"d"
+			],
+			"command": "close_file"
+		}
+	]
