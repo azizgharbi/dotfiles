@@ -1,0 +1,21 @@
+// Settings in here override those in "Default/Preferences.sublime-settings",
+// and are overridden in turn by syntax-specific settings.
+{
+	// When Vintage, the vi emulation package, is enabled
+	// (see ignored_packages, below), this setting controls if files are opened
+	// in command mode or insert mode by default
+	"vintage_start_in_command_mode": true,
+	// Yank commands can place the text in either an internal register, or in
+	// the system clipboard.
+	"vintage_use_clipboard": true,
+	// By default Vintage will interpret all ctrl+<key> key bindings as
+	// regular Sublime Text key bindings. Set this to true to make ctrl keys
+	// act as they do in vim, instead (e.g., ctrl+f to move forward a page).
+	"vintage_ctrl_keys": true,
+	"color_scheme": "Mariana.sublime-color-scheme",
+	"font_size": 15,
+	"theme": "Adaptive.sublime-theme",
+	"ignored_packages":[
+	],
+	"index_files": true,
+}
