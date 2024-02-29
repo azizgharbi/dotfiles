@@ -4,6 +4,11 @@
 - Install `nvim` and `awesomeWm`.
 - Run the `install.lua` script: `lua install.lua`
 
-#### Yabai:
+#### MacOS:
 
-- yabai --start-service
+- Install `brew`.
+- install `yabai` and `skhd`.
+
+
+* Simple and minamalistic dotfiles trying to have same behavior on (Linux, MacOS).
+
