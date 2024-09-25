@@ -1,12 +1,23 @@
 local os = require("os")
 local dir = os.getenv("HOME") .. "/.config/"
 local configs = { "awesome", "nvim" }
+local os_type = os.getenv("OS_TYPE")
+--[[ 
+    check if macoc
+--]]
+local function is_macos()
+	return os_type == "macOS"
+end
+
+--]]
 
 -- Setup function
 local function lsp_install()
-	-- copy paste regex
-	os.execute("sudo pacman -S xsel ripgrep ripgrep-all")
-	-- tssever go vuels lsp
+	if is_macos() then
+		os.execute("brew install xsel ripgrep")
+	else
+		os.execute("sudo pacman -S xsel ripgrep")
+	end
 	os.execute("sudo npm i -g typescript-language-server typescript-language-server gopls vls")
 end
 --}}

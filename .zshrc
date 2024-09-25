@@ -32,12 +32,6 @@ else
   export EDITOR='nvim'
 fi
 
-
-source /home/flavasavah/.config/broot/launcher/bash/br
-
-# lua lsp
-alias luamake=/home/flavasavah/Documents/packages/lua-language-server/3rd/luamake/luamake
-
 source ~/.aliases
 
 # pnpm
