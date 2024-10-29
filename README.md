@@ -1,15 +1,18 @@
-#### requirements:
+#### Requirements:
 
 - Install `lua` and `luaRocks`.
-- Install `nvim` and `awesomeWm`.
-- Run the `install.lua` script: `lua install.lua`
+- Install `nvim`.
 
 #### MacOS:
 
 - Install `brew`.
 - install `yabai` and `skhd`.
+- Run the `install.lua`.
 
-#### What/why:
+#### Linux:
 
-Simple and minamalistic dotfiles trying to have same behavior on (Linux, MacOS).
+- install `awesome wm`.
+- Run the `install.lua`.
 
+
+- At the end of the day you're another day older.
