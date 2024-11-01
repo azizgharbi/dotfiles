@@ -11,13 +11,19 @@ end
 
 --]]
 
--- Setup function
-local function lsp_install()
+-- Install dependencies
+local function deps_install()
+	-- Check if is_macos
 	if is_macos() then
-		os.execute("brew install xsel ripgrep")
+		-- Install dependencies
+		os.execute("brew install yabai skhd xsel ripgrep")
+		-- Restart services
+		os.execute("skhd --restart-service")
+		os.execute("yabai --restart-service")
 	else
 		os.execute("sudo pacman -S xsel ripgrep")
 	end
+	-- Install nodejs
 	os.execute("sudo npm i -g typescript-language-server typescript-language-server gopls vls")
 end
 --}}
@@ -52,10 +58,10 @@ end
 --]]
 
 --[[
-    Lsp installation
+    Dependencies installation
     Catch error if missing node ]]
-local function execute_lsp_install()
-	if pcall(lsp_install) then
+local function execute_deps_install()
+	if pcall(deps_install) then
 		print("Success Installation!")
 	else
 		print("Missing Dependencies")
@@ -86,7 +92,7 @@ local function execute_choice()
 		if selection == "0" then
 			set_config_files()
 		elseif selection == "1" then
-			execute_lsp_install()
+			execute_deps_install()
 		elseif selection == "2" then
 			update_dotfiles()
 		elseif selection == "3" then
